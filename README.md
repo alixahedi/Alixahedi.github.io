@@ -1,4 +1,4 @@
-# Ali Zahedi Mobini — Portfolio (Home anchors + project pages)
+# Ali Zahedi Mobini — Portfolio 
 
 - Everything (About, Skills, Experience, Awards, Patents, Education, Contact) is on **Home** with anchors.
 - **Projects** and **Courses** have separate pages.
@@ -28,4 +28,3 @@ Ali Zahedi Mobini/
 ```
 
 Deploy on GitHub Pages from the repo root.
-# Alixahedi.github.io
