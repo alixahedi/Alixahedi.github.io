@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0e13"/>
+      <stop offset="1" stop-color="#11151c"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7bd6ff"/>
+      <stop offset="1" stop-color="#9effa9"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="rgba(255,255,255,.06)"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <rect x="16" y="16" width="1248" height="688" rx="28" fill="url(#dots)" opacity=".5"/>
+  <rect x="510" y="260" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="260" width="10" height="8" fill="#7bd6ff"/><rect x="510" y="280" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="280" width="10" height="8" fill="#7bd6ff"/><rect x="510" y="300" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="300" width="10" height="8" fill="#7bd6ff"/><rect x="510" y="320" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="320" width="10" height="8" fill="#7bd6ff"/><rect x="510" y="340" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="340" width="10" height="8" fill="#7bd6ff"/><rect x="510" y="360" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="360" width="10" height="8" fill="#7bd6ff"/><rect x="510" y="380" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="380" width="10" height="8" fill="#7bd6ff"/><rect x="510" y="400" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="400" width="10" height="8" fill="#7bd6ff"/><rect x="510" y="420" width="10" height="8" fill="#7bd6ff"/><rect x="700" y="420" width="10" height="8" fill="#7bd6ff"/><rect x="520" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="520" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="540" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="540" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="560" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="560" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="580" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="580" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="600" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="600" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="620" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="620" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="640" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="640" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="660" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="660" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="680" y="250" width="8" height="10" fill="#7bd6ff"/><rect x="680" y="440" width="8" height="10" fill="#7bd6ff"/><rect x="520" y="260" width="180" height="180" rx="16" fill="#111923" stroke="#2a3a4a"/><text x="610" y="370" fill="#9effa9" font-family="Arial, Helvetica, sans-serif" font-size="34" text-anchor="middle">STM32</text>
+</svg>
