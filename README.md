@@ -1,181 +1,137 @@
-# Ali Zhedi — Portfolio Website
+# Ali Zhedi
 
-A modern, responsive portfolio website showcasing expertise in Electronics & Embedded Systems Engineering, IoT, Medical Devices, and Computer Vision.
+**Electronics & Embedded Systems Engineer**
 
-## 🌟 Features
+*IoT • Medical Devices • Computer Vision*
 
-### Design & User Experience
-- **Modern Dark Theme** with gradient accents and glass morphism effects
-- **Fully Responsive** design optimized for desktop, tablet, and mobile devices
-- **Smooth Animations** with cubic-bezier transitions and hover effects
-- **Professional Typography** with justified text and proper spacing
-- **Interactive Elements** with shimmer effects and 3D transforms
+## 🚀 About Me
 
-### Navigation & Structure
-- **Single Page Application** with smooth scrolling navigation
-- **Mobile-First Menu** with full-screen overlay and touch-friendly interactions
-- **Dynamic Active States** that highlight current section during scroll
-- **Social Media Integration** with icons for GitHub, LinkedIn, Telegram, YouTube, and Instagram
+I am an experienced Electronics and Embedded Systems Engineer with a strong background in IoT and medical device development. My work focuses on the design of intelligent embedded and cyber-physical systems, particularly for smart home, smart city, and healthcare applications.
 
-### Content Sections
-- **Hero Section** with professional introduction and call-to-action buttons
-- **About Section** with detailed background and key statistics
-- **Skills Section** with categorized progress bars and proficiency levels
-- **Projects Showcase** with interactive cards and detailed project pages
-- **Courses Section** highlighting educational content and workshops
-- **Contact Section** with multiple communication channels
+## 🎯 Expertise
 
-## 🚀 Technologies Used
+### Core Specializations
+- **Hardware/Software Co-design** - End-to-end system development from concept to production
+- **Real-time System Integration** - Optimized embedded solutions for time-critical applications
+- **Secure Communication Protocols** - Implementing robust security in IoT and embedded systems
+- **Medical Device Development** - Specialized in healthcare technology and digital pathology tooling
 
-- **HTML5** - Semantic markup and accessibility features
-- **CSS3** - Modern styling with CSS Grid, Flexbox, and custom properties
-- **JavaScript (ES6+)** - Interactive functionality and smooth scrolling
-- **Font Awesome** - Professional icon library
-- **CSS Custom Properties** - Consistent theming and easy customization
+### Technical Domains
+- **Embedded Systems** - 7+ years of experience in microcontroller programming and system design
+- **IoT Development** - Smart home, smart city, and industrial IoT solutions
+- **Computer Vision** - Image processing, machine learning, and AI integration
+- **Medical Technology** - Digital pathology, smart imaging hardware, and diagnostic systems
 
-## 📱 Responsive Design
+## 🛠️ Technical Skills
 
-### Desktop (960px+)
-- Multi-column layouts with CSS Grid
-- Hover effects with 3D transforms
-- Sidebar navigation for detailed pages
-- Large typography and generous spacing
+### Programming Languages
+- **C/C++** - Advanced proficiency in embedded systems development
+- **Python** - Data analysis, machine learning, and automation
+- **JavaScript** - Web development and IoT dashboards
+- **Verilog** - FPGA programming and digital design
 
-### Mobile (960px and below)
-- Single-column layouts
-- Full-screen mobile menu with overlay
-- Touch-optimized button sizes
-- Centered content alignment
+### Platforms & Microcontrollers
+- **STM32** - Expert level with extensive project experience
+- **ESP32** - IoT applications and wireless connectivity
+- **Raspberry Pi** - Linux-based embedded systems
+- **AVR** - Microcontroller programming and optimization
+- **FPGA** - Digital signal processing and hardware acceleration
 
-## 🎨 Design System
+### Tools & Frameworks
+- **Linux** - System administration and embedded Linux development
+- **Docker** - Containerization and deployment
+- **Git** - Version control and collaborative development
+- **PCB Design** - Professional circuit board layout and manufacturing
+- **OpenCV** - Computer vision and image processing
+- **PyQt** - Desktop application development
+- **LVGL** - Embedded GUI development
+- **TouchGFX** - Advanced touch interface design
 
-### Color Palette
-```css
---bg: #0b0e13          /* Dark background */
---surface: #11151c     /* Card backgrounds */
---text: #e8eef7        /* Primary text */
---muted: #9fb0c3       /* Secondary text */
---brand: #7bd6ff       /* Primary brand color */
---brand-2: #9effa9     /* Secondary brand color */
---accent: #ffd580      /* Accent color */
---line: #1f2633        /* Borders and dividers */
-```
+### Communication Protocols
+- **UART, I2C, SPI/QSPI** - Serial communication interfaces
+- **CAN** - Automotive and industrial communication
+- **Ethernet** - Network connectivity and protocols
+- **MQTT** - IoT messaging and cloud integration
 
-### Typography
-- **Font Family**: System UI fonts for optimal performance
-- **Text Alignment**: Justified for body text, left-aligned for headings
-- **Font Weights**: 400 (normal), 600 (semi-bold), 700 (bold), 800 (extra-bold)
+## 🏆 Professional Highlights
 
-### Spacing & Layout
-- **Container Width**: max(1200px, 92%) for responsive design
-- **Grid Gaps**: 1rem for consistent spacing
-- **Border Radius**: 12px-20px for modern rounded corners
-- **Shadows**: Layered shadows with brand color glows
+- **7+ years** of experience in Embedded Systems & IoT
+- **10+ production projects** successfully deployed
+- **3 research domains** with published work
+- **Expert-level proficiency** in STM32 and ESP32 platforms
+- **Specialized knowledge** in medical device development
 
-## 📁 Project Structure
+## 🎓 Education & Teaching
 
-```
-Ali Zhedi Portfolio/
-├── index.html                 # Main homepage
-├── css/
-│   ├── style.css             # Main stylesheet
-│   ├── skills.css            # Skills section styles
-│   └── courses.css           # Courses section styles
-├── img/
-│   ├── avatar.jpg            # Profile image
-│   ├── favicon.svg           # Site icon
-│   ├── projects/             # Project images
-│   └── courses/              # Course images
-├── Page/
-│   ├── about.html            # About page (sidebar layout)
-│   ├── skills.html           # Skills page (sidebar layout)
-│   ├── contact.html          # Contact page (sidebar layout)
-│   ├── experience.html       # Experience page (sidebar layout)
-│   ├── education.html        # Education page (sidebar layout)
-│   ├── awards.html           # Awards page (sidebar layout)
-│   ├── patents.html          # Patents page (sidebar layout)
-│   ├── projects.html         # Projects overview (header layout)
-│   ├── courses.html          # Courses overview (header layout)
-│   └── projects/             # Individual project pages
-│       ├── deepstitch.html
-│       ├── microscope-camera.html
-│       ├── laser-scanner.html
-│       ├── poe-hub.html
-│       ├── carbox-plasma.html
-│       ├── smart-ac-remote.html
-│       ├── dali-master.html
-│       └── secure-ota.html
-├── script.js                 # JavaScript functionality
-└── README.md                 # This file
-```
+### Educational Background
+- **Electronics & Embedded Systems Engineering** - Advanced degree with focus on IoT and medical applications
+- **Continuous Learning** - Staying current with latest technologies and industry trends
 
-## 🛠️ Key Features Implementation
+### Teaching Experience
+- **STM32 Microcontroller Mastery** - Comprehensive course covering fundamentals to advanced applications
+- **IoT Development Workshops** - Hands-on training in ESP32, cloud connectivity, and data analytics
+- **PCB Design Fundamentals** - Professional layout techniques and manufacturing considerations
+- **Embedded Linux Development** - System programming and device driver development
 
-### Mobile Menu System
-- **Full-screen overlay** with backdrop blur
-- **Smooth animations** with opacity and transform transitions
-- **Touch-optimized** button sizes and spacing
-- **Accessibility features** with proper ARIA labels
+### Teaching Philosophy
+- **Project-Based Learning** - Every concept reinforced through practical, real-world applications
+- **Industry-Standard Tools** - Students work with professional development environments
+- **Comprehensive Resources** - Extensive documentation and continued learning support
+- **Mentorship & Support** - Ongoing guidance for career development in embedded systems
 
-### Interactive Elements
-- **Shimmer effects** on hover using CSS pseudo-elements
-- **3D transforms** with translateY, scale, and rotate
-- **Gradient backgrounds** with brand color integration
-- **Smooth scrolling** with JavaScript intersection observer
+## 🔬 Research & Development
 
-### Performance Optimizations
-- **CSS Custom Properties** for efficient theming
-- **Optimized images** with proper aspect ratios
-- **Minimal JavaScript** with vanilla ES6+ features
-- **Efficient selectors** and CSS organization
+### Current Focus Areas
+- **Digital Pathology Tooling** - Advanced imaging systems for medical diagnostics
+- **Smart Imaging Hardware** - Intelligent camera systems with embedded processing
+- **IoT Security** - Secure communication protocols for connected devices
+- **Real-time Systems** - Optimized embedded solutions for time-critical applications
 
-## 🚀 Deployment
+### Innovation Approach
+- **End-to-End Development** - From firmware and PCB design to vision software and UI
+- **Reliable Systems** - Focus on robust, production-ready solutions
+- **Scalable Architecture** - Building systems that can adapt and grow
+- **User-Centered Design** - Creating intuitive interfaces and experiences
 
-### GitHub Pages
-1. Push code to GitHub repository
-2. Enable GitHub Pages in repository settings
-3. Select source branch (usually `main` or `master`)
-4. Access your site at `https://username.github.io/repository-name`
+## 🌐 Professional Network
 
-### Custom Domain (Optional)
-1. Add `CNAME` file with your domain name
-2. Configure DNS settings with your domain provider
-3. Enable HTTPS in GitHub Pages settings
+### Industry Connections
+- **Embedded Systems Community** - Active participation in technical forums and conferences
+- **IoT Development Groups** - Collaboration on open-source projects
+- **Medical Technology Sector** - Partnerships with healthcare technology companies
+- **Academic Collaborations** - Research partnerships with universities and institutions
 
-## 📧 Contact & Social Media
+### Open Source Contributions
+- **GitHub Projects** - Public repositories showcasing technical expertise
+- **Community Support** - Helping fellow developers and engineers
+- **Knowledge Sharing** - Technical articles and educational content
+- **Mentorship** - Guiding junior developers in embedded systems
 
-- **Email**: Alixahedi@gmail.com
+## 📧 Contact & Collaboration
+
+I'm always interested in discussing new opportunities, collaborations, and challenging projects in embedded systems and IoT development.
+
+### Get in Touch
+- **Email**: [Alixahedi@gmail.com](mailto:Alixahedi@gmail.com)
 - **GitHub**: [github.com/alixahedi](https://github.com/alixahedi)
 - **LinkedIn**: [linkedin.com/in/alixahedi](https://www.linkedin.com/in/alixahedi/)
 - **Telegram**: [t.me/talixahedi](https://t.me/talixahedi)
 - **YouTube**: [youtube.com/@alizahedi](https://youtube.com/@alizahedi)
 - **Instagram**: [instagram.com/alizahedi](https://instagram.com/alizahedi)
 
-## 📄 License
+### Areas of Interest
+- **Embedded Systems Consulting** - Technical expertise for complex projects
+- **IoT Solution Development** - End-to-end connected device solutions
+- **Medical Device Innovation** - Healthcare technology and diagnostic systems
+- **Educational Content Creation** - Technical training and knowledge sharing
+- **Research Collaborations** - Academic and industry partnerships
 
-This project is open source and available under the [MIT License](LICENSE).
+## 🎯 Mission Statement
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues).
-
-## 📝 Changelog
-
-### Version 2.0 (Current)
-- ✨ Modern dark theme with gradient accents
-- 📱 Fully responsive mobile-first design
-- 🎨 Enhanced hover effects and animations
-- 🔧 Improved mobile menu system
-- 📊 Interactive skills section with progress bars
-- 🎯 Social media integration
-- ⚡ Performance optimizations
-
-### Version 1.0
-- 🏗️ Basic portfolio structure
-- 📄 Static content pages
-- 🎨 Simple styling and layout
+My mission is to bridge the gap between theoretical knowledge and practical embedded systems development, creating reliable, intelligent, and adaptive systems that solve real-world problems. I believe in continuous learning, knowledge sharing, and building technology that makes a positive impact on society.
 
 ---
 
-**Built with ❤️ by Ali Zhedi**  
-*Electronics & Embedded Systems Engineer*
+**"From firmware and PCB to vision software and UI — I build end-to-end, reliable systems."**
+
+*Building the future of embedded systems, one project at a time.*
