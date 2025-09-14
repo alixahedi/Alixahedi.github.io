@@ -732,7 +732,7 @@ h2{ font-size:clamp(1.2rem, 2.6vw, 1.8rem); margin:0 0 .8rem; }
   
   /* Mobile Menu Overlay */
   .navlinks{ 
-    display:none; 
+    display:none !important; 
     position:fixed; 
     top:0; 
     left:0; 
@@ -751,8 +751,8 @@ h2{ font-size:clamp(1.2rem, 2.6vw, 1.8rem); margin:0 0 .8rem; }
     transition:all 0.3s ease;
   }
   
-  .navlinks.open{ 
-    display:flex; 
+  .navlinks.active{ 
+    display:flex !important; 
     opacity:1;
     transform:translateY(0);
   }
