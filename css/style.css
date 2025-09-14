@@ -62,7 +62,7 @@ body{
 .brand:hover::before{
   left:100%;
 }
-.brand img{ width:36px; height:36px; border-radius:10px; border:1px solid var(--line); background:#0f141d; }
+.brand img{ width:36px; height:36px; border-radius:50%; border:1px solid var(--line); background:#0f141d; }
 .brand span{ font-weight:800; letter-spacing:.2px; }
 .navlinks{ display:flex; gap:1rem; }
 .navlinks a{
@@ -96,6 +96,48 @@ body{
 }
 .menu-btn{ display:none; }
 .close-btn{ display:none; }
+
+/* Header Controls */
+.header-controls{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+}
+
+.lang-toggle{
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #081018;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(123,214,255,0.3);
+}
+
+.lang-toggle::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.lang-toggle:hover{
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(123,214,255,0.4);
+}
+
+.lang-toggle:hover::before{
+  left: 100%;
+}
 
 /* Hero */
 .container{ width:min(1200px, 92%); margin-inline:auto; }
@@ -163,23 +205,55 @@ h1{ font-size:clamp(1.6rem, 3.4vw, 2.4rem); margin:0 0 .6rem; }
   left:100%;
 }
 .hero-visual{
-  background: conic-gradient(from 200deg at 60% 40%, rgba(123,214,255,.10), rgba(158,255,169,.10), transparent 30%);
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:.75rem;
+  position: relative;
+  border-radius:50%;
+  padding:0.2rem;
   display:grid;
   place-items:center;
-  box-shadow: var(--shadow);
+  /* Glowing halo effect */
+  background: 
+    radial-gradient(circle at center, rgba(123,214,255,0.15) 0%, rgba(158,255,169,0.1) 30%, transparent 70%),
+    conic-gradient(from 0deg, rgba(123,214,255,0.2), rgba(158,255,169,0.15), rgba(255,213,128,0.1), rgba(123,214,255,0.2));
+  box-shadow: 
+    0 0 40px rgba(123,214,255,0.3),
+    0 0 80px rgba(158,255,169,0.2),
+    0 0 120px rgba(123,214,255,0.1),
+    inset 0 0 20px rgba(255,255,255,0.05);
+  border: none;
+  animation: glowPulse 4s ease-in-out infinite;
   /* Let the image define its own height; no forced aspect ratio, so no crop */
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 40px rgba(123,214,255,0.3),
+      0 0 80px rgba(158,255,169,0.2),
+      0 0 120px rgba(123,214,255,0.1),
+      inset 0 0 20px rgba(255,255,255,0.05);
+  }
+  50% {
+    box-shadow: 
+      0 0 60px rgba(123,214,255,0.4),
+      0 0 100px rgba(158,255,169,0.3),
+      0 0 140px rgba(123,214,255,0.2),
+      inset 0 0 30px rgba(255,255,255,0.08);
+  }
 }
 
 .hero-visual img{
   width: 100%;
   height: auto;
   max-width: 600px; /* avoid upscaling beyond this (original photo is 640px) */
-  object-fit: contain;
-  border-radius:12px;
+  object-fit: cover;
+  border-radius:50%;
   display:block;
+  position: relative;
+  z-index: 2;
+  border: none;
+  box-shadow: 
+    0 0 20px rgba(0,0,0,0.3),
+    inset 0 0 5px rgba(255,255,255,0.05);
 }
 
 
@@ -217,8 +291,90 @@ h2{ font-size:clamp(1.2rem, 2.6vw, 1.8rem); margin:0 0 .8rem; }
 .project a{ color:var(--brand); text-decoration:none; }
 .project a:hover{ color:var(--brand-2); }
 
+/* Skills Bars */
+.skills-bars{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:1.5rem;
+}
+
+.skill-group{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.5rem;
+  box-shadow:var(--shadow);
+}
+
+.skill-group h3{
+  color:var(--brand);
+  margin:0 0 1rem 0;
+  font-size:1.1rem;
+  font-weight:600;
+}
+
+.skill{
+  margin-bottom:1rem;
+}
+
+.skill:last-child{
+  margin-bottom:0;
+}
+
+.skill .head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:0.5rem;
+}
+
+.skill .label{
+  color:var(--text);
+  font-weight:500;
+}
+
+.skill .val{
+  color:var(--brand);
+  font-weight:600;
+  font-size:0.9rem;
+}
+
+.skill .bar{
+  height:8px;
+  background:var(--line);
+  border-radius:4px;
+  overflow:hidden;
+  position:relative;
+}
+
+.skill .bar span{
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg, var(--brand), var(--brand-2));
+  border-radius:4px;
+  width:0%;
+  transition:width 1s ease-in-out;
+}
+
 /* Contact */
-.contact{ display:flex; gap:1rem; flex-wrap:wrap; }
+.contact{ 
+  display:flex; 
+  gap:1rem; 
+  flex-wrap:wrap; 
+  justify-content:center;
+  align-items:center;
+}
+
+/* RTL Support */
+[dir="rtl"] h1 { text-align: right; }
+[dir="rtl"] h2 { text-align: right; }
+[dir="rtl"] h3 { text-align: right; }
+[dir="rtl"] .hero h1 { text-align: right; }
+[dir="rtl"] .hero .subtitle { text-align: right; }
+[dir="rtl"] .skill .head { flex-direction: row-reverse; }
+[dir="rtl"] .skill .label { text-align: right; }
+[dir="rtl"] .skill .val { text-align: left; }
+[dir="rtl"] .skill-group h3 { text-align: right; }
 
 /* Course Page Styles */
 .course-header{
@@ -233,7 +389,7 @@ h2{ font-size:clamp(1.2rem, 2.6vw, 1.8rem); margin:0 0 .8rem; }
 .course-image{
   width:120px;
   height:120px;
-  border-radius:16px;
+  border-radius:50%;
   object-fit:cover;
   border:2px solid var(--line);
 }
@@ -523,7 +679,19 @@ h2{ font-size:clamp(1.2rem, 2.6vw, 1.8rem); margin:0 0 .8rem; }
     margin:0 auto;
   }
   .skills{ grid-template-columns: 1fr; }
+  .skills-bars{ grid-template-columns: 1fr; }
   .grid.cols-3{ grid-template-columns: 1fr; }
+  
+  /* Contact responsive */
+  .contact{ 
+    gap:0.8rem; 
+    justify-content:center;
+  }
+  .contact .btn{
+    min-width:48px;
+    min-height:48px;
+    flex-shrink:0;
+  }
   
   /* Hamburger Menu Button */
   .menu-btn{ 
@@ -729,8 +897,8 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle, .meta, .label, .num, .txt {
 }
 
 /* ---------- Media cards (image + hover overlay) ---------- */
-.media-card .media-link{ position:relative; display:block; border-radius:16px; overflow:hidden; border:1px solid var(--line, #1f2633); background:#0f141d; }
-.media-card .thumb{ aspect-ratio: 16 / 9; background-size: cover; background-position: center; transition: transform .35s ease; }
+.media-card .media-link{ position:relative; display:block; border-radius:50%; overflow:hidden; border:1px solid var(--line, #1f2633); background:#0f141d; }
+.media-card .thumb{ aspect-ratio: 1 / 1; background-size: cover; background-position: center; transition: transform .35s ease; }
 .media-card .media-link:hover .thumb{ transform: scale(1.06); }
 .media-card .overlay{
   position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end;
@@ -765,3 +933,142 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle, .meta, .label, .num, .txt {
 .media-card:hover .overlay{ opacity:1; }
 .media-card .overlay .meta{ font-size:.92rem; opacity:.95; }
 .media-card .title{ margin:.35rem 0 0; font-weight:800; font-size:1.06rem; text-align:center; }
+
+/* Project and Course Detail Pages */
+.project-detail, .course-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.project-header, .course-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+
+.project-header h1, .course-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.project-meta, .course-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-meta span, .course-meta span {
+  padding: 0.5rem 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #667eea;
+}
+
+.project-content, .course-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.project-description, .course-description,
+.project-technologies, .course-modules,
+.project-features, .course-prerequisites,
+.course-outcomes {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-description h2, .course-description h2,
+.project-technologies h2, .course-modules h2,
+.project-features h2, .course-prerequisites h2,
+.course-outcomes h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #667eea;
+}
+
+.project-description p, .course-description p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tech-tag {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-features ul, .course-modules ul,
+.course-prerequisites ul, .course-outcomes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-features li, .course-modules li,
+.course-prerequisites li, .course-outcomes li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.project-features li:before, .course-modules li:before,
+.course-prerequisites li:before, .course-outcomes li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.project-features li:last-child, .course-modules li:last-child,
+.course-prerequisites li:last-child, .course-outcomes li:last-child {
+  border-bottom: none;
+}
+
+/* RTL Support for Detail Pages */
+[dir="rtl"] .project-header h1, [dir="rtl"] .course-header h1 {
+  text-align: right;
+}
+
+[dir="rtl"] .project-description h2, [dir="rtl"] .course-description h2,
+[dir="rtl"] .project-technologies h2, [dir="rtl"] .course-modules h2,
+[dir="rtl"] .project-features h2, [dir="rtl"] .course-prerequisites h2,
+[dir="rtl"] .course-outcomes h2 {
+  text-align: right;
+}
+
+[dir="rtl"] .project-features li, [dir="rtl"] .course-modules li,
+[dir="rtl"] .course-prerequisites li, [dir="rtl"] .course-outcomes li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+[dir="rtl"] .project-features li:before, [dir="rtl"] .course-modules li:before,
+[dir="rtl"] .course-prerequisites li:before, [dir="rtl"] .course-outcomes li:before {
+  left: auto;
+  right: 0;
+}
