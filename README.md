@@ -1,4 +1,4 @@
-# Ali Zahedi Mobini — Portfolio 
+# Ali Zhedi — Portfolio 
 
 - Everything (About, Skills, Experience, Awards, Patents, Education, Contact) is on **Home** with anchors.
 - **Projects** and **Courses** have separate pages.
@@ -6,7 +6,7 @@
 
 ## Structure
 ```
-Ali Zahedi Mobini/
+Ali Zhedi/
 ├── index.html
 ├── css/
 │   └── style.css

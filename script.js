@@ -3,7 +3,10 @@
   // mobile menu
   const menuBtn = document.getElementById('menuBtn');
   const links = document.getElementById('navlinks');
+  const closeBtn = document.querySelector('.close-btn');
+  
   menuBtn && menuBtn.addEventListener('click', ()=> links.classList.toggle('open'));
+  closeBtn && closeBtn.addEventListener('click', ()=> links.classList.remove('open'));
 
   // smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
