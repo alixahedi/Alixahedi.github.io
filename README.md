@@ -117,7 +117,7 @@ I'm always interested in discussing new opportunities, collaborations, and chall
 - **LinkedIn**: [linkedin.com/in/alixahedi](https://www.linkedin.com/in/alixahedi/)
 - **Telegram**: [t.me/talixahedi](https://t.me/talixahedi)
 - **YouTube**: [youtube.com/@alizahedi](https://youtube.com/@alizahedi)
-- **Instagram**: [instagram.com/alizahedi](https://instagram.com/alizahedi)
+- **Instagram**: [instagram.com/alizahedi](https://instagram.com/alixahedi)
 
 ### Areas of Interest
 - **Embedded Systems Consulting** - Technical expertise for complex projects
