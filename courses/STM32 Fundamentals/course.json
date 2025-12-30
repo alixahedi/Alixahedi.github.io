@@ -1,0 +1,32 @@
+{
+  "title": "STM32 Fundamentals",
+  "meta": "Beginner · GPIO to DMA",
+  "details": {
+    "title": "STM32 Fundamentals - Beginner Course",
+    "description": "Comprehensive beginner STM32 course covering everything from basic GPIO operations to advanced features like DMA and Watchdog.",
+    "duration": "40 hours",
+    "level": "Beginner",
+    "platform": "STM32F4",
+    "modules": [
+      "Introduction to STM32 and ARM Cortex-M",
+      "GPIO Configuration and Control",
+      "Interrupts and Exception Handling",
+      "Timers and PWM Generation",
+      "ADC and DAC Operations",
+      "Communication Protocols (UART, SPI, I2C)",
+      "DMA and Memory Management",
+      "Watchdog and Power Management"
+    ],
+    "prerequisites": ["Basic C programming knowledge", "Understanding of embedded systems concepts"],
+    "outcomes": [
+      "Master STM32 development environment",
+      "Implement various peripheral interfaces",
+      "Develop efficient embedded applications",
+      "Understand ARM Cortex-M architecture"
+    ]
+  }
+}
+
+
+
+

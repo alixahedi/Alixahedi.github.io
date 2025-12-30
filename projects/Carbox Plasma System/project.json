@@ -1,0 +1,21 @@
+{
+  "title": "Carbox Plasma System",
+  "meta": "2024 · Medical · High Voltage",
+  "details": {
+    "description": "Plasma generation device for medical and industrial applications with precise parameter control and safety features.",
+    "technologies": ["High Voltage", "Control Systems", "Safety Protocols", "C++"],
+    "features": [
+      "Precise plasma generation control",
+      "Safety monitoring systems",
+      "Real-time parameter adjustment",
+      "Data logging and reporting",
+      "Industrial-grade reliability"
+    ],
+    "year": "2024",
+    "category": "Medical & Industrial"
+  }
+}
+
+
+
+

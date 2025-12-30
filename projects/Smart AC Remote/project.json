@@ -1,0 +1,21 @@
+{
+  "title": "Smart AC Remote",
+  "meta": "2022 · IoT · Smart Home",
+  "details": {
+    "description": "Smart air conditioner controller with remote control and scheduling capabilities for home automation systems.",
+    "technologies": ["IoT", "Smart Home", "Remote Control", "C++"],
+    "features": [
+      "Remote temperature control",
+      "Scheduling and automation",
+      "Energy monitoring",
+      "Mobile app integration",
+      "Voice control support"
+    ],
+    "year": "2022",
+    "category": "Smart Home"
+  }
+}
+
+
+
+

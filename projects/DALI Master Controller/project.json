@@ -1,0 +1,21 @@
+{
+  "title": "DALI Master Controller",
+  "meta": "2023 · Smart Lighting · Control",
+  "details": {
+    "description": "Main controller for DALI smart lighting system with comprehensive control and monitoring capabilities.",
+    "technologies": ["DALI Protocol", "Smart Lighting", "Control Systems", "C++"],
+    "features": [
+      "DALI protocol implementation",
+      "Centralized lighting control",
+      "Energy monitoring",
+      "Scene management",
+      "Remote control interface"
+    ],
+    "year": "2023",
+    "category": "Smart Lighting"
+  }
+}
+
+
+
+

@@ -1,0 +1,21 @@
+{
+  "title": "PoE Network Hub",
+  "meta": "2023 · Network · Power",
+  "details": {
+    "description": "Network hub with Power over Ethernet capability for power supply and network connection in smart building applications.",
+    "technologies": ["PoE", "Network Management", "Power Distribution", "C++"],
+    "features": [
+      "Power over Ethernet support",
+      "Network switching capabilities",
+      "Power monitoring",
+      "Remote management",
+      "Scalable architecture"
+    ],
+    "year": "2023",
+    "category": "Network Infrastructure"
+  }
+}
+
+
+
+

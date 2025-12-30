@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlElement">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="pageTitle"></title>
+  <meta name="description" id="pageDescription" content="" />
+  <!-- Needed for dynamic projects/courses on localhost (GitHub API needs owner/repo) -->
+  <script>
+    // Change these if your GitHub username/repo name are different
+    window.REPO_CONFIG = window.REPO_CONFIG || { owner: "alixahedi", repo: "Alixahedi.github.io" };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="navbar">
+    <nav id="navlinks" class="navlinks">
+      <button class="close-btn" aria-label="Close menu" id="closeBtn">×</button>
+      <a href="#home" id="navHome">Home</a>
+      <a href="#resume" id="navResume">Resume</a>
+      <a href="#projects" id="navProjects">Projects</a>
+      <a href="#courses" id="navCourses">Courses</a>
+      <a href="#contact" id="navContact">Contact</a>
+    </nav>
+    <div class="header-controls">
+      <button id="langToggle" class="lang-toggle" aria-label="Toggle language" title="Switch to Farsi">فا</button>
+      <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero container">
+    <div>
+      <h1 id="heroTitle"></h1>
+      <p class="subtitle" id="heroSubtitle"></p>
+      <p class="desc" id="heroDesc"></p>
+      <div class="cta">
+        <!-- Social links will be populated by script.js -->
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/img/avatar.jpg" alt="Portrait"/>
+    </div>
+  </section>
+
+  <section id="home" class="section container">
+    <h2 id="homeTitle"></h2>
+    <div class="card">
+      <p id="homeContent"></p>
+      <div class="highlights" style="margin-top:.8rem;">
+        <div class="highlight"><div class="num" id="yearsNum"></div><div class="txt" id="yearsText"></div></div>
+        <div class="highlight"><div class="num" id="projectsNum"></div><div class="txt" id="projectsText"></div></div>
+        <div class="highlight"><div class="num" id="domainsNum"></div><div class="txt" id="domainsText"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section container">
+    <h2 id="resumeTitle">Resume</h2>
+    
+    <div id="skills" class="section" style="padding: 1.2rem 0 0;">
+      <h2 id="skillsTitle"></h2>
+      <div class="skills-bars">
+        <!-- Skills will be populated by JS from content.js -->
+      </div>
+    </div>
+
+    <div id="education" class="section" style="padding: 1.2rem 0 0;">
+      <h2 id="educationTitle">Education</h2>
+      <div class="card">
+        <div id="educationList" class="resume-list">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <div id="experience" class="section" style="padding: 1.2rem 0 0;">
+      <h2 id="experienceTitle">Experience</h2>
+      <div class="card">
+        <div id="experienceList" class="resume-list">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding: 1.2rem 0 0;">
+      <h2 id="resumeDownloadTitle">Download Resume</h2>
+      <div class="card resume-download">
+        <p id="resumeDesc"></p>
+        <div class="resume-actions">
+          <a id="resumeDownloadBtn" class="btn primary" href="assets/Resume.pdf" download>Download Resume (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section container">
+    <h2 id="projectsTitle"></h2>
+    <div class="card">
+      <div class="grid cols-3">
+        <!-- Projects will be populated by JS from content.js -->
+      </div>
+    </div>
+  </section>
+
+  <section id="courses" class="section container">
+    <h2 id="coursesTitle"></h2>
+    <div class="card">
+      <div class="grid cols-3">
+        <!-- Courses will be populated by JS from content.js -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section container">
+    <h2 id="contactTitle"></h2>
+    <div class="card">
+      <div class="contact">
+        <!-- Social links will be populated by script.js -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Ali Zhedi. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="dynamic-content.js"></script>
+<script src="gallery.js"></script>
+<script src="populate.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

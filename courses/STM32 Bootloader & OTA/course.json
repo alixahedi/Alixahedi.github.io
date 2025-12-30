@@ -1,0 +1,32 @@
+{
+  "title": "STM32 Bootloader & OTA",
+  "meta": "Expert · Bootloader & OTA",
+  "details": {
+    "title": "STM32 Bootloader & OTA Updates",
+    "description": "Specialized course on implementing bootloaders and over-the-air update systems for STM32 microcontrollers.",
+    "duration": "30 hours",
+    "level": "Expert",
+    "platform": "STM32F4 Bootloader",
+    "modules": [
+      "Bootloader Architecture and Design",
+      "Flash Memory Management",
+      "OTA Update Implementation",
+      "Security and Authentication",
+      "Error Handling and Recovery",
+      "Boot Sequence Optimization",
+      "Application Integration",
+      "Testing and Validation"
+    ],
+    "prerequisites": ["Advanced STM32 knowledge", "Understanding of embedded security"],
+    "outcomes": [
+      "Implement custom bootloaders",
+      "Design secure OTA systems",
+      "Handle update failures gracefully",
+      "Optimize boot performance"
+    ]
+  }
+}
+
+
+
+

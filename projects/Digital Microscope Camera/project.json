@@ -1,0 +1,21 @@
+{
+  "title": "Digital Microscope Camera",
+  "meta": "2024 · Imaging · Embedded",
+  "details": {
+    "description": "Advanced imaging system for microscopes with image processing and automatic detection capabilities for medical and research applications.",
+    "technologies": ["STM32", "Camera Module", "Image Processing", "C++"],
+    "features": [
+      "High-resolution image capture",
+      "Real-time image processing",
+      "Automatic focus adjustment",
+      "Measurement and annotation tools",
+      "Data logging and analysis"
+    ],
+    "year": "2024",
+    "category": "Medical Devices"
+  }
+}
+
+
+
+

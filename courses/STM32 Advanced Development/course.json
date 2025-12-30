@@ -1,0 +1,32 @@
+{
+  "title": "STM32 Advanced Development",
+  "meta": "Advanced · FreeRTOS",
+  "details": {
+    "title": "STM32 Advanced Development",
+    "description": "Advanced STM32 course covering FreeRTOS, memory management, optimization techniques, and complex system design.",
+    "duration": "50 hours",
+    "level": "Advanced",
+    "platform": "STM32F4 with FreeRTOS",
+    "modules": [
+      "FreeRTOS Task Management",
+      "Memory Management and Optimization",
+      "Advanced Interrupt Handling",
+      "Real-time System Design",
+      "Power Management Strategies",
+      "Advanced Communication Protocols",
+      "System Integration and Testing",
+      "Performance Optimization"
+    ],
+    "prerequisites": ["STM32 Fundamentals course", "Experience with embedded systems"],
+    "outcomes": [
+      "Design complex real-time systems",
+      "Implement efficient memory management",
+      "Optimize system performance",
+      "Master FreeRTOS concepts"
+    ]
+  }
+}
+
+
+
+

@@ -1,0 +1,21 @@
+{
+  "title": "Secure OTA System",
+  "meta": "2023 · Security · IoT",
+  "details": {
+    "description": "Secure firmware update system for IoT devices with encryption and authentication for reliable over-the-air updates.",
+    "technologies": ["OTA", "Security", "IoT", "Encryption"],
+    "features": [
+      "Secure firmware updates",
+      "Encryption and authentication",
+      "Rollback capabilities",
+      "Progress monitoring",
+      "Multi-device support"
+    ],
+    "year": "2023",
+    "category": "IoT Security"
+  }
+}
+
+
+
+

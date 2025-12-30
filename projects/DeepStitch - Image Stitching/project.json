@@ -1,0 +1,19 @@
+{
+  "title": "DeepStitch — Image Stitching",
+  "meta": "2025 · Python · AI",
+  "details": {
+    "description": "Intelligent image stitching system using deep learning algorithms to create high-quality panoramic images from multiple overlapping photos.",
+    "technologies": ["Python", "OpenCV", "Deep Learning", "Computer Vision"],
+    "features": [
+      "Automatic feature detection and matching",
+      "Seamless blending of overlapping regions",
+      "Support for various image formats",
+      "Real-time processing capabilities",
+      "High-quality panoramic output"
+    ],
+    "year": "2025",
+    "category": "AI & Computer Vision"
+  }
+}
+
+
