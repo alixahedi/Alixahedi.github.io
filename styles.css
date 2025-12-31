@@ -5,6 +5,15 @@
 @import url("css/skills.css");
 @import url("css/courses.css");
 
+/* --- Mobile safety: prevent horizontal scroll from 100vw overlays --- */
+html, body{
+  overflow-x: hidden;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 /* --- Avatar image: always circle (crop, don't distort) --- */
 /* Navbar avatar already has explicit sizing; enforce circle + cover just in case */
 #brandImg{
@@ -56,6 +65,18 @@
 .site-header .header-controls{
   position: absolute;
   right: 0;
+}
+[dir="rtl"] .site-header .header-controls{
+  right: auto;
+  left: 0;
+}
+
+/* Mobile: center hero portrait for nicer layout */
+@media (max-width: 960px){
+  .hero-visual{
+    justify-self: center !important;
+    margin-inline: auto;
+  }
 }
 
 /* Resume sections */
@@ -200,6 +221,18 @@
   .resume-item{
     width: 100%;
   }
+
+  /* Mobile: avoid title/date fighting for space */
+  .resume-item-head{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+  .resume-item-date{
+    white-space: normal;
+    align-self: flex-start;
+  }
+
   [dir="rtl"] .resume-list{
     padding-left: 0;
     padding-right: var(--tl-gutter);
@@ -207,6 +240,9 @@
   [dir="rtl"] .resume-list::before{
     left: auto;
     right: var(--tl-line-x);
+  }
+  [dir="rtl"] .resume-item-head{
+    align-items: flex-start; /* text alignment handled elsewhere; keep layout stable */
   }
 }
 
