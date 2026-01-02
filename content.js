@@ -4,7 +4,7 @@
 window.siteData = {
   "general": {
     "avatar": "assets/img/avatar.jpg",
-    "brandName": "Ali Zahedi"
+    "brandName": "Ali Zahedi-Mobini"
   },
   "social": {
     "email": "mailto:Alixahedi@gmail.com",
@@ -16,9 +16,9 @@ window.siteData = {
   },
   "translations": {
     "en": {
-      "pageTitle": "Ali Zahedi",
+      "pageTitle": "Ali Zahedi-Mobini",
       "pageDescription": "Electronics & Embedded Systems Engineer.",
-      "brandName": "Ali Zahedi",
+      "brandName": "Ali Zahedi-Mobini",
       "navHome": "Home",
       "navProjects": "Projects",
       "navCourses": "Courses",
@@ -55,9 +55,9 @@ window.siteData = {
       "contactTitle": "Contact"
     },
     "fa": {
-      "pageTitle": "علی زاهدی",
+      "pageTitle": "علی زاهدی مبینی",
       "pageDescription": "مهندس الکترونیک و سیستم‌های تعبیه‌شده با تخصص در اینترنت اشیا، تجهیزات پزشکی و بینایی کامپیوتر",
-      "brandName": "علی زاهدی",
+      "brandName": "علی زاهدی مبینی",
       "navHome": "خانه",
       "navProjects": "پروژه‌ها",
       "navCourses": "دوره‌ها",
