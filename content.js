@@ -27,7 +27,7 @@ window.siteData = {
       "heroTitle": "Electronics & Embedded Systems Engineer",
       "heroSubtitle": "IoT • Medical Devices • Computer Vision",
       "heroDesc": "From firmware and PCB to vision software and UI  I build end‑to‑end, reliable systems. Currently focused on digital pathology tooling and smart imaging hardware.",
-      "HomeTitle": "Home",
+      "aboutTitle": "About",
       "HomeContent": "Experienced Electronics and Embedded Systems Engineer with a strong background in IoT and medical device development. My work focuses on the design of intelligent embedded and cyber-physical systems, particularly for smart home, smart city, and healthcare applications. I specialize in hardware/software co-design, real-time system integration, and secure communication protocols. Proficient in platforms such as STM32, ESP32, Raspberry Pi, and FPGA, with extensive experience in C/C++, RTOS, and GUI development using LVGL and TouchGFX. I aim to build scalable, intelligent, and adaptive embedded systems for next-generation connected environments.",
       "HomeHighlights": {
         "years": "7+ years",
@@ -46,7 +46,6 @@ window.siteData = {
       },
       "projectsTitle": "Projects",
       "coursesTitle": "Courses",
-      "resumeTitle": "Resume",
       "resumeDesc": "Get the full resume as a PDF file.",
       "resumeDownload": "Download Resume (PDF)",
       "educationTitle": "Education",
@@ -66,7 +65,7 @@ window.siteData = {
       "heroTitle": "مهندس الکترونیک و سیستم‌های تعبیه‌شده",
       "heroSubtitle": "اینترنت اشیا • تجهیزات پزشکی • بینایی کامپیوتر",
       "heroDesc": "از فریم‌ور و PCB تا نرم‌افزار بینایی و رابط کاربری، سیستم‌های قابل اعتماد و کامل می‌سازم. در حال حاضر روی ابزارهای پاتولوژی دیجیتال و سخت‌افزار تصویربرداری هوشمند تمرکز دارم.",
-      "HomeTitle": "درباره",
+      "aboutTitle": "درباره",
       "HomeContent": "مهندس الکترونیک و سیستم‌های تعبیه‌شده با تجربه و پیشینه قوی در توسعه اینترنت اشیا و تجهیزات پزشکی. کار من بر طراحی سیستم‌های تعبیه‌شده هوشمند و سایبر-فیزیکی متمرکز است، به ویژه برای کاربردهای خانه هوشمند، شهر هوشمند و مراقبت‌های بهداشتی. من در طراحی مشترک سخت‌افزار/نرم‌افزار، یکپارچه‌سازی سیستم‌های بلادرنگ و پروتکل‌های ارتباطی امن تخصص دارم. در پلتفرم‌هایی مانند STM32، ESP32، Raspberry Pi و FPGA مهارت دارم و تجربه گسترده‌ای در C/C++، RTOS و توسعه GUI با استفاده از LVGL و TouchGFX دارم. هدف من ساخت سیستم‌های تعبیه‌شده مقیاس‌پذیر، هوشمند و سازگار برای محیط‌های متصل نسل بعدی است.",
       "HomeHighlights": {
         "years": "7+ سال",
@@ -85,7 +84,6 @@ window.siteData = {
       },
       "projectsTitle": "پروژه‌ها",
       "coursesTitle": "دوره‌ها",
-      "resumeTitle": "رزومه",
       "resumeDesc": "می‌توانید نسخه کامل رزومه را به صورت PDF دریافت کنید.",
       "resumeDownload": "دانلود رزومه (PDF)",
       "educationTitle": "تحصیلات",

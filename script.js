@@ -25,9 +25,20 @@ window.initializeNavigation = function initializeNavigation() {
       const href = navAnchor.getAttribute('href');
       if (href && href.startsWith('#')) {
         const targetId = href.substring(1);
-
         const main = document.querySelector('main');
         const isDetailPage = main && main.hasAttribute('data-original-content');
+
+        /* Home: top of main page (no section id) */
+        if (!targetId) {
+          if (isDetailPage && window.showHomePage) window.showHomePage();
+          const scrollTop = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          };
+          if (isDetailPage) setTimeout(scrollTop, 120);
+          else scrollTop();
+          window.closeMobileMenu();
+          return;
+        }
 
         if (isDetailPage) {
           if (window.showHomePage) window.showHomePage();

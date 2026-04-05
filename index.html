@@ -12,7 +12,6 @@
   </script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +22,7 @@
   <div class="navbar">
     <nav id="navlinks" class="navlinks">
       <button class="close-btn" aria-label="Close menu" id="closeBtn">×</button>
-      <a href="#home" id="navHome">Home</a>
+      <a href="#" id="navHome">Home</a>
       <a href="#resume" id="navResume">Resume</a>
       <a href="#projects" id="navProjects">Projects</a>
       <a href="#courses" id="navCourses">Courses</a>
@@ -38,12 +37,16 @@
 
 <main>
   <section class="hero container">
-    <div>
-      <h1 id="heroTitle"></h1>
-      <p class="subtitle" id="heroSubtitle"></p>
-      <p class="desc" id="heroDesc"></p>
-      <div class="cta">
-        <!-- Social links will be populated by script.js -->
+    <div class="card card--section hero-panel">
+      <header class="section-head section-head--hero">
+        <h1 id="heroTitle" class="section-head__title"></h1>
+      </header>
+      <div class="section-body">
+        <p class="subtitle" id="heroSubtitle"></p>
+        <p class="desc" id="heroDesc"></p>
+        <div class="cta">
+          <!-- Social links will be populated by script.js -->
+        </div>
       </div>
     </div>
     <div class="hero-visual">
@@ -51,80 +54,131 @@
     </div>
   </section>
 
-  <section id="home" class="section container">
-    <h2 id="homeTitle"></h2>
-    <div class="card">
-      <p id="homeContent"></p>
-      <div class="highlights" style="margin-top:.8rem;">
-        <div class="highlight"><div class="num" id="yearsNum"></div><div class="txt" id="yearsText"></div></div>
-        <div class="highlight"><div class="num" id="projectsNum"></div><div class="txt" id="projectsText"></div></div>
-        <div class="highlight"><div class="num" id="domainsNum"></div><div class="txt" id="domainsText"></div></div>
+  <!-- Decorative scroll hint (mouse) between hero and About — not interactive -->
+  <div class="scroll-hint-band" aria-hidden="true">
+    <div class="scroll-mouse">
+      <span class="scroll-mouse__wheel"></span>
+    </div>
+  </div>
+
+  <section id="about" class="section container">
+    <div class="card card--section">
+      <header class="section-head">
+        <h2 id="aboutTitle" class="section-head__title"></h2>
+      </header>
+      <div class="section-body">
+        <p id="homeContent"></p>
+        <div class="highlights home-highlights">
+          <div class="highlight"><div class="num" id="yearsNum"></div><div class="txt" id="yearsText"></div></div>
+          <div class="highlight"><div class="num" id="projectsNum"></div><div class="txt" id="projectsText"></div></div>
+          <div class="highlight"><div class="num" id="domainsNum"></div><div class="txt" id="domainsText"></div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="resume" class="section container">
-    <h2 id="resumeTitle">Resume</h2>
-    
-    <div id="skills" class="section" style="padding: 1.2rem 0 0;">
-      <h2 id="skillsTitle"></h2>
-      <div class="skills-bars">
-        <!-- Skills will be populated by JS from content.js -->
+  <section id="resume" class="section container resume-page">
+    <div id="skills" class="card card--section resume-block-card">
+      <header class="section-head section-head--sub">
+        <h3 id="skillsTitle" class="section-head__title"></h3>
+      </header>
+      <div class="section-body">
+        <div class="skills-bars">
+          <!-- Skills will be populated by JS from content.js -->
+        </div>
       </div>
     </div>
 
-    <div id="education" class="section" style="padding: 1.2rem 0 0;">
-      <h2 id="educationTitle">Education</h2>
-      <div class="card">
+    <div id="education" class="card card--section resume-block-card">
+      <header class="section-head section-head--sub">
+        <h3 id="educationTitle" class="section-head__title">Education</h3>
+      </header>
+      <div class="section-body section-body--resume">
         <div id="educationList" class="resume-list">
           <!-- populated by JS -->
         </div>
       </div>
     </div>
 
-    <div id="experience" class="section" style="padding: 1.2rem 0 0;">
-      <h2 id="experienceTitle">Experience</h2>
-      <div class="card">
+    <div id="experience" class="card card--section resume-block-card">
+      <header class="section-head section-head--sub">
+        <h3 id="experienceTitle" class="section-head__title">Experience</h3>
+      </header>
+      <div class="section-body section-body--resume">
         <div id="experienceList" class="resume-list">
           <!-- populated by JS -->
         </div>
       </div>
     </div>
 
-    <div class="section" style="padding: 1.2rem 0 0;">
-      <h2 id="resumeDownloadTitle">Download Resume</h2>
-      <div class="card resume-download">
-        <p id="resumeDesc"></p>
-        <div class="resume-actions">
-          <a id="resumeDownloadBtn" class="btn primary" href="assets/Resume.pdf" download>Download Resume (PDF)</a>
+    <div class="card card--section resume-block-card resume-dl-card">
+      <div class="resume-dl-panel">
+        <div class="resume-dl-visual" aria-hidden="true">
+          <div class="resume-dl-orbit"></div>
+          <div class="resume-dl-docstack">
+            <div class="resume-dl-doc resume-dl-doc--shadow"></div>
+            <div class="resume-dl-doc resume-dl-doc--main">
+              <span class="resume-dl-doc__fold"></span>
+              <div class="resume-dl-doc__lines">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <span class="resume-dl-doc__chip">PDF</span>
+            </div>
+          </div>
+        </div>
+        <div class="resume-dl-copy">
+          <h3 id="resumeDownloadTitle" class="resume-dl-title"></h3>
+          <p id="resumeDesc" class="resume-dl-desc"></p>
+          <a id="resumeDownloadBtn" class="resume-dl-btn" href="assets/Resume.pdf" download>
+            <span class="resume-dl-btn__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M7 11l5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="resume-dl-btn__text" id="resumeDownloadBtnLabel">Download Resume (PDF)</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <section id="projects" class="section container">
-    <h2 id="projectsTitle"></h2>
-    <div class="card">
-      <div class="grid cols-3">
-        <!-- Projects will be populated by JS from content.js -->
+    <div class="card card--section">
+      <header class="section-head">
+        <h2 id="projectsTitle" class="section-head__title"></h2>
+      </header>
+      <div class="section-body section-body--grid">
+        <div class="grid cols-3">
+          <!-- Projects will be populated by JS from content.js -->
+        </div>
       </div>
     </div>
   </section>
 
   <section id="courses" class="section container">
-    <h2 id="coursesTitle"></h2>
-    <div class="card">
-      <div class="grid cols-3">
-        <!-- Courses will be populated by JS from content.js -->
+    <div class="card card--section">
+      <header class="section-head">
+        <h2 id="coursesTitle" class="section-head__title"></h2>
+      </header>
+      <div class="section-body section-body--grid">
+        <div class="grid cols-3">
+          <!-- Courses will be populated by JS from content.js -->
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact" class="section container">
-    <h2 id="contactTitle"></h2>
-    <div class="card">
-      <div class="contact">
-        <!-- Social links will be populated by script.js -->
+    <div class="card card--section">
+      <header class="section-head">
+        <h2 id="contactTitle" class="section-head__title"></h2>
+      </header>
+      <div class="section-body">
+        <div class="contact">
+          <!-- Social links will be populated by script.js -->
+        </div>
       </div>
     </div>
   </section>

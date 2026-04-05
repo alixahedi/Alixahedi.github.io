@@ -1,7 +1,7 @@
 /* Ali Zahedi Mobini — Portfolio v4 (original design) */
 :root{
-  --bg:#0b0e13;
-  --surface:#11151c;
+  --bg:#070a10;
+  --surface:#10141d;
   --text:#e8eef7;
   --muted:#9fb0c3;
   --brand:#7bd6ff;
@@ -9,6 +9,7 @@
   --accent:#ffd580;
   --line:#1f2633;
   --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --shadow-glow: 0 0 0 1px rgba(123,214,255,.06), 0 20px 50px rgba(0,0,0,.4);
 }
 
 *{box-sizing:border-box}
@@ -16,18 +17,27 @@ html,body{margin:0;padding:0}
 body{
   font-family: ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,"Noto Sans",sans-serif;
   color:var(--text);
-  background: radial-gradient(1200px 600px at 20% -10%, rgba(123,214,255,.08), transparent 60%),
-              radial-gradient(1200px 600px at 80% -10%, rgba(158,255,169,.08), transparent 60%),
-              var(--bg);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 1000px 520px at 12% -5%, rgba(123,214,255,.16), transparent 58%),
+    radial-gradient(ellipse 900px 480px at 88% 8%, rgba(158,255,169,.11), transparent 52%),
+    radial-gradient(ellipse 700px 560px at 50% 105%, rgba(255,213,128,.07), transparent 50%),
+    linear-gradient(180deg, rgba(123,214,255,.035) 0%, transparent 28%, transparent 72%, rgba(158,255,169,.02) 100%),
+    repeating-linear-gradient(90deg, transparent, transparent 72px, rgba(255,255,255,.018) 72px, rgba(255,255,255,.018) 73px),
+    repeating-linear-gradient(0deg, transparent, transparent 72px, rgba(255,255,255,.014) 72px, rgba(255,255,255,.014) 73px);
   line-height:1.65;
+}
+@media (min-width: 900px){
+  body{ background-attachment: fixed; }
 }
 
 /* Header */
 .site-header{
   position:sticky; top:0; z-index:30;
-  backdrop-filter: blur(8px);
-  background: color-mix(in oklab, var(--bg) 75%, transparent);
-  border-bottom:1px solid var(--line);
+  backdrop-filter: blur(14px) saturate(1.15);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--bg) 82%, transparent), color-mix(in oklab, var(--bg) 65%, transparent));
+  border-bottom:1px solid color-mix(in oklab, var(--line) 75%, var(--brand) 18%);
+  box-shadow: 0 8px 32px rgba(0,0,0,.25), 0 1px 0 rgba(255,255,255,.04) inset;
 }
 .navbar{
   width:min(1200px, 92%); margin-inline:auto;
@@ -139,15 +149,83 @@ body{
   left: 100%;
 }
 
+/* Page canvas (depth behind sections) */
+main{
+  position: relative;
+  isolation: isolate;
+}
+main::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:0;
+  width:min(100%, 1320px);
+  height:100%;
+  background:
+    radial-gradient(ellipse 42% 32% at 0% 18%, rgba(123,214,255,.09), transparent),
+    radial-gradient(ellipse 38% 28% at 100% 55%, rgba(158,255,169,.07), transparent);
+  pointer-events:none;
+  z-index:0;
+}
+main > section{
+  position:relative;
+  z-index:1;
+}
+
 /* Hero */
 .container{ width:min(1200px, 92%); margin-inline:auto; }
 .hero{
   display:grid; grid-template-columns: 1.2fr 1fr; gap:2rem; align-items:center;
-  padding:2rem 0 1.6rem;
+  padding:clamp(2rem, 5vw, 3.25rem) 0 clamp(1.75rem, 4vw, 2.75rem);
+  position:relative;
 }
-h1{ font-size:clamp(1.6rem, 3.4vw, 2.4rem); margin:0 0 .6rem; }
-.hero .subtitle{ color:var(--muted); margin:.2rem 0 .8rem; }
-.hero .desc{ color:var(--text); opacity:.9; }
+.hero > div:first-child{
+  position:relative;
+  padding:clamp(.5rem, 2vw, 1.25rem) 0;
+}
+/* Decorative frame only when hero text is not the card layout */
+.hero > div:first-child:not(.hero-panel)::before{
+  content:'';
+  position:absolute;
+  inset:-12px -8px -12px -16px;
+  border-radius:20px;
+  background: linear-gradient(135deg, rgba(123,214,255,.07), transparent 45%, rgba(158,255,169,.05));
+  border:1px solid rgba(123,214,255,.12);
+  z-index:-1;
+  pointer-events:none;
+}
+[dir="rtl"] .hero > div:first-child:not(.hero-panel)::before{
+  inset:-12px -16px -12px -8px;
+}
+h1{
+  font-size:clamp(1.75rem, 3.6vw, 2.65rem);
+  margin:0 0 .65rem;
+  line-height:1.15;
+  letter-spacing:-.02em;
+  background: linear-gradient(135deg, #f0f7ff 0%, var(--brand) 42%, var(--brand-2) 88%, var(--accent) 115%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter: drop-shadow(0 0 28px rgba(123,214,255,.12));
+}
+@supports not (background-clip: text){
+  h1{ color:var(--text); background:none; filter:none; }
+}
+.hero .subtitle{
+  color:var(--muted);
+  margin:.35rem 0 .9rem;
+  display:inline-block;
+  padding:.28rem .85rem;
+  border-radius:999px;
+  font-size:clamp(.88rem, 1.5vw, .98rem);
+  font-weight:600;
+  letter-spacing:.02em;
+  background: linear-gradient(135deg, rgba(123,214,255,.12), rgba(158,255,169,.06));
+  border:1px solid rgba(123,214,255,.22);
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+.hero .desc{ color:var(--text); opacity:.92; max-width:52ch; }
 .cta{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem; }
 .btn{
   display:inline-block; text-decoration:none; font-weight:700;
@@ -204,6 +282,20 @@ h1{ font-size:clamp(1.6rem, 3.4vw, 2.4rem); margin:0 0 .6rem; }
 .btn.ghost:hover::before{
   left:100%;
 }
+
+/* Social / icon-only buttons (inline SVG; no webfont CDN) */
+.btn.icon-only{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:2.75rem;
+  padding:.65rem .75rem;
+}
+.btn.icon-only .social-svg,
+.btn.icon-only svg{
+  display:block;
+  flex-shrink:0;
+}
 .hero-visual{
   position: relative;
   border-radius:50%;
@@ -258,25 +350,60 @@ h1{ font-size:clamp(1.6rem, 3.4vw, 2.4rem); margin:0 0 .6rem; }
 
 
 /* Sections */
-.section{ padding:1.2rem 0; scroll-margin-top:84px; }
-h2{ font-size:clamp(1.2rem, 2.6vw, 1.8rem); margin:0 0 .8rem; }
+.section{ padding:clamp(1.35rem, 3vw, 2.2rem) 0; scroll-margin-top:84px; }
+h2{
+  font-size:clamp(1.25rem, 2.7vw, 1.95rem);
+  margin:0 0 .85rem;
+  font-weight:800;
+  letter-spacing:-.015em;
+  color:var(--text);
+}
+/* Section titles live inside .section-head (see styles.css); no floating underlines */
 .card{
-  background: var(--surface);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:1rem;
-  box-shadow: var(--shadow);
+  background:
+    linear-gradient(155deg, rgba(255,255,255,.075) 0%, transparent 45%),
+    linear-gradient(220deg, rgba(123,214,255,.05) 0%, transparent 38%),
+    var(--surface);
+  border:1px solid color-mix(in oklab, var(--line) 78%, var(--brand) 22%);
+  border-radius:18px;
+  padding:clamp(1.05rem, 2.2vw, 1.4rem);
+  box-shadow: var(--shadow), var(--shadow-glow), 0 1px 0 rgba(255,255,255,.05) inset;
+  backdrop-filter: blur(12px);
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+.card:hover{
+  border-color: color-mix(in oklab, var(--line) 60%, var(--brand) 40%);
+  box-shadow: var(--shadow), 0 0 0 1px rgba(123,214,255,.1), 0 24px 56px rgba(0,0,0,.38);
+}
+/* Wrapper cards around project/course grids: keep hover subtle */
+.card:has(> .grid):hover,
+.card--section:has(.grid.cols-3):hover{
+  border-color: color-mix(in oklab, var(--line) 78%, var(--brand) 22%);
+  box-shadow: var(--shadow), var(--shadow-glow), 0 1px 0 rgba(255,255,255,.05) inset;
 }
 
 /* Highlights */
-.highlights{ display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+.highlights{ display:grid; grid-template-columns: repeat(3, 1fr); gap:clamp(.85rem, 2vw, 1.15rem); }
 .highlight{
-  background: color-mix(in oklab, var(--surface) 90%, black 10%);
-  border:1px dashed var(--line);
-  border-radius:14px; padding:1rem; text-align:center;
+  background:
+    linear-gradient(165deg, rgba(123,214,255,.1), rgba(15,20,30,.92) 55%);
+  border:1px solid color-mix(in oklab, var(--line) 65%, var(--brand) 35%);
+  border-radius:16px;
+  padding:clamp(1rem, 2vw, 1.25rem);
+  text-align:center;
+  box-shadow: 0 10px 28px rgba(0,0,0,.22), 0 0 0 1px rgba(255,255,255,.04) inset;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
-.highlight .num{ font-size:1.6rem; font-weight:800; background: linear-gradient(90deg, var(--brand), var(--accent)); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.highlight .txt{ color:var(--muted); }
+.highlight:hover{
+  transform: translateY(-3px);
+  border-color: rgba(123,214,255,.45);
+  box-shadow: 0 16px 40px rgba(123,214,255,.12), 0 0 0 1px rgba(255,255,255,.06) inset;
+}
+@media (prefers-reduced-motion: reduce){
+  .highlight:hover{ transform:none; }
+}
+.highlight .num{ font-size:clamp(1.5rem, 3vw, 1.85rem); font-weight:800; background: linear-gradient(100deg, var(--brand), var(--brand-2) 50%, var(--accent)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.highlight .txt{ color:var(--muted); font-size:.95rem; margin-top:.2rem; }
 
 /* Skills */
 .skills{ display:grid; gap:1rem; grid-template-columns: repeat(2, 1fr); }
@@ -299,11 +426,14 @@ h2{ font-size:clamp(1.2rem, 2.6vw, 1.8rem); margin:0 0 .8rem; }
 }
 
 .skill-group{
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:12px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.05), transparent 50%),
+    var(--surface);
+  border:1px solid color-mix(in oklab, var(--line) 75%, var(--brand) 20%);
+  border-radius:14px;
   padding:1.5rem;
-  box-shadow:var(--shadow);
+  box-shadow: var(--shadow), 0 0 0 1px rgba(255,255,255,.03) inset;
+  backdrop-filter: blur(8px);
 }
 
 .skill-group h3{
@@ -648,8 +778,25 @@ h2{ font-size:clamp(1.2rem, 2.6vw, 1.8rem); margin:0 0 .8rem; }
 }
 
 /* Footer */
-.site-footer{ border-top:1px solid var(--line); color:var(--muted); text-align:center; padding:1rem 0; margin-top:1rem; }
-.site-footer p{ text-align:center; }
+.site-footer{
+  position:relative;
+  border-top:none;
+  color:var(--muted);
+  text-align:center;
+  padding:clamp(1.5rem, 3vw, 2.25rem) 0;
+  margin-top:clamp(1.5rem, 4vw, 2.5rem);
+  background: linear-gradient(180deg, transparent, rgba(123,214,255,.045) 40%, rgba(15,20,30,.85));
+}
+.site-footer::before{
+  content:'';
+  display:block;
+  width:min(420px, 72%);
+  height:1px;
+  margin:0 auto 1.1rem;
+  background: linear-gradient(90deg, transparent, rgba(123,214,255,.5), rgba(158,255,169,.45), transparent);
+  opacity:.75;
+}
+.site-footer p{ text-align:center; margin:0; font-size:.95rem; }
 .footer{ text-align:center; }
 .footer p{ text-align:center; }
 
